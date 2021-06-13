@@ -1,0 +1,191 @@
+/*
+APTus AppCenter by pavroo <pavroo@onet.eu> 2018
+Improvenments by Piotr "MoroS" Mrożek
+License: GNU GPL 3
+Last update: June 10, 2021 by pavroo
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	/*background: #FFFFFF; center no-repeat*/
+	font-family: sans-serif, Arial, Helvetica;
+	font-size: 13px;
+	color: #181B20;
+	background: url("images/background.png") no-repeat;
+}
+
+h1 {
+	margin: 0px;
+	padding: 9px;
+	font-size: 1.3em;
+	color: white; /* #181B20; */
+	font-family: sans-serif, Arial, Helvetica;
+}
+
+h2 {
+	font-size: 1.3em;
+	padding: 12px;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 0.9em;
+}
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Header */
+
+#header {
+	/* background: url('images/header.png') center no-repeat; */
+	/* background: #ececec; */
+	background-color: #444;
+	height: 40px;
+	margin: 0px auto;
+}
+
+/* footer menu */
+
+div.scrollmenu {
+	background-color: #444;
+	overflow: auto;
+	white-space: nowrap;
+	text-align: center;
+	padding: 0;
+}
+
+div.scrollmenu a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+	background-color: #777;
+}
+
+/* Page */
+
+#page {
+	width: 780px;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 760px;
+}
+
+#content .contentbg {
+	width: 780px;
+	padding: 10px 30px 0px 30px;
+}
+
+#contentfull {
+	float: right;
+	width: 780px;
+}
+
+#contentfull .contentbgfull {
+	width: 760px;
+	padding: 5px 5px 0px 5px;
+}
+
+.post {
+	clear: both;
+	padding-bottom: 10px;
+	/*border-bottom: 1px solid #DEDEDE;*/
+}
+
+.post .title {
+	padding-top: 5px;
+	letter-spacing: -4px;
+	font-size: 15px;
+	color: #3FA449;
+}
+
+.post .title a {
+	border: none;
+	color: #3FA449;
+}
+
+.post .meta {
+	padding-bottom: 10px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+}
+
+.post .meta a {
+}
+
+.post .entry {
+	text-align: justify;
+	margin-bottom: 15px;
+	padding: 0px 0px 0px 0px;
+}
+
+.links {
+	display: block;
+	width: 96px;
+	padding: 2px 0px 2px 0px;
+	background: #A53602;
+	text-align: center;
+	/*text-transform: uppercase;*/
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+/* columns 1-2 */
+
+#column1 {
+	float: left;
+	width: 50%;
+}
+#column2 {
+	float: left;
+	width: 50%;
+}
+
+/* button main page */
+.button {
+	display: inline-block;
+	/*background-color: #727272;*/
+	background-color: white;
+	border-radius: 3px;
+	width: 220px; /*185*/
+	height: 32px; /*36*/
+	/*color: white;*/
+	color: black;
+	padding: 16px 16px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 2px 2px 2px rgba(0,0,0,.3);
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	transition: all 0.5s;
+	/*transition: 0.3s;*/
+	margin: 4px 4px;
+	cursor: pointer;
+	opacity: 0.9;
+	border: 2px solid #c3c3c3;
+}
+
+.button:hover {
+    background-color: #c3c3c3;
+    color: white;
+}

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Last update by pavroo June 12, 2021
+
+LANGUAGE=${LANG:0:2}
+EN=`echo $LANGUAGE | grep en`
+ES=`echo $LANGUAGE | grep es`
+PL=`echo $LANGUAGE | grep pl`
+
+if [ "$ES" != "" ]; then
+	LANGUAGE="$LANGUAGE"
+elif [ "$PL" != "" ]; then
+	LANGUAGE="$LANGUAGE"
+else
+	LANGUAGE="en"
+fi
+
+POS="--center --width 800 --height 550"
+HTML="--html --browser"
+# index page
+if [ "$1" = "" ]; then
+	yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+elif [ "$1" = "glowna" ]; then
+	yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+fi
+
+exit 0

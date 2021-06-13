@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# Last update by pavroo June 13, 2021
+
+URI="$1"
+
+cd /usr/lib/sparky-welcome
+
+# ignore empty URI
+if [[ "$URI" == "" ]]; then
+	echo "no command... exiting..."
+	exit 1
+fi
+
+# html URI runs external www-browser
+if [[ "$URI" == http* ]]; then
+	echo "running external web page..."
+	killall -9 yad
+	x-www-browser "$URI"
+	./welcome
+	exit 1
+fi
+
+# local file URI opens inside YAD
+if [[ "$URI" == file* ]]; then
+	echo "running a web page from local disk..."
+	exit 0
+fi
+
+# cos://something runs our command inside YAD
+if [[ "$URI" == cos* ]]; then
+	# remove 'cos:'
+	CMD=`echo "$URI" | sed -e 's/cos:\/\///'`
+	echo "running a command for $CMD..."
+	CHECK01=`echo "$CMD" | grep app01`
+	CHECK02=`echo "$CMD" | grep upg02`
+	CHECK03=`echo "$CMD" | grep abo03`
+	CHECK04=`echo "$CMD" | grep sys04`
+
+	if [ "$CHECK01" != "" ]; then
+		killall -9 yad
+		spsudo /usr/bin/sparky-aptus-appcenter
+		./welcome
+		exit 0
+	
+	elif [ "$CHECK02" != "" ]; then
+		killall -9 yad
+		if [ -f /home/$USER/.sparky-welcome-first ]; then
+			echo "it is not first run, launch upgrade only"
+			spsudo /usr/bin/sparky-aptus-upgrade
+		else
+			echo "it is the first run, run upgrade and locale installation"
+			spsudo /usr/bin/sparky-aptus-upgrade && spsudo /usr/lib/sparky-aptus-appcenter/bin/sparky-locale
+			touch /home/$USER/.sparky-welcome-first
+		fi
+		./welcome
+		exit 0
+	
+	elif [ "$CHECK03" != "" ]; then
+		killall -9 yad
+		/usr/bin/sparky-about
+		./welcome
+		exit 0
+	
+	elif [ "$CHECK04" != "" ]; then
+		killall -9 yad
+		/usr/bin/sparky-system
+		./welcome
+		exit 0
+	
+	else
+		echo "unknown command... exiting"
+		exit 0
+	fi
+
+fi
+
+exit 0
