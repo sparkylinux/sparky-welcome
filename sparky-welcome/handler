@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Last update by pavroo June 13, 2021
+# Last update by pavroo June 14, 2021
 
 URI="$1"
 
-cd /usr/lib/sparky-welcome
+#cd /usr/lib/sparky-welcome
 
 # ignore empty URI
 if [[ "$URI" == "" ]]; then
@@ -36,6 +36,8 @@ if [[ "$URI" == cos* ]]; then
 	CHECK02=`echo "$CMD" | grep upg02`
 	CHECK03=`echo "$CMD" | grep abo03`
 	CHECK04=`echo "$CMD" | grep sys04`
+	CHECK05=`echo "$CMD" | grep ext05`
+	CHECK06=`echo "$CMD" | grep ins06`
 
 	if [ "$CHECK01" != "" ]; then
 		killall -9 yad
@@ -68,6 +70,25 @@ if [[ "$URI" == cos* ]]; then
 		./welcome
 		exit 0
 	
+	elif [ "$CHECK05" != "" ]; then
+		killall -9 yad
+		exit 1
+	
+	elif [ "$CHECK06" != "" ]; then
+		killall -9 yad
+		# how much RAM you have
+		CHECKRAM="`cat /proc/meminfo | head -n1 | cut -f2 -d":" | tr -s " " | cut -f2 -d " "`"
+		# minimum size of RAM to launch Calamares is 1024MB | 1001328 kB
+		RAMMIN="1001327"
+		if [ "$CHECKRAM" -gt "$RAMMIN" ]; then
+			echo "RAM is smaller than 1GB, launch Sparky Advanced Installer GUI"
+			remsu /usr/bin/sparky-installer gui
+			exit 1
+		else
+			echo "RAM is bigger than 1GB, launch Calamares"
+			remsu /usr/bin/calamares
+			exit 1
+		fi
 	else
 		echo "unknown command... exiting"
 		exit 0

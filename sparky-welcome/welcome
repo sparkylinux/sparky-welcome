@@ -15,13 +15,27 @@ else
 	LANGUAGE="en"
 fi
 
-POS="--center --width 800 --height 550"
+POS="--center --width 825 --height 572"
 HTML="--html --browser"
 # index page
-if [ "$1" = "" ]; then
-	yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
-elif [ "$1" = "glowna" ]; then
-	yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+
+TESTMODE=`mount | grep squashfs`
+if [ "$TESTMODE" != "" ] && [ -d /home/live ]; then
+
+	if [ "$1" = "" ]; then
+		yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index-live.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+	elif [ "$1" = "glowna" ]; then
+		yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index-live.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+	fi
+	
+else
+
+	if [ "$1" = "" ]; then
+		yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+	elif [ "$1" = "glowna" ]; then
+		yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+	fi
+
 fi
 
 exit 0
