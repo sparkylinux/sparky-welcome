@@ -22,7 +22,7 @@ bash coreutils grep mount psmisc sparky-about sparky-aptus-appcenter sparky-aptu
 
 Recommends:
 -------------
-firefox-esr | firefox | chromium | dillo | epiphany | konqueror | seamonkey | tor-browser | vivaldi-stable | opera-stable | google-chrome | palemoon | otter-browser | icecat | dooble | brave-browser | waterfox-classic-kpe | iron | librewolf
+firefox-esr | firefox | chromium | dillo | epiphany | konqueror | seamonkey | tor-browser | vivaldi-stable | opera-stable | google-chrome-stable | palemoon | otter-browser | icecat | dooble | brave-browser | waterfox-classic-kpe | iron | librewolf | epiphany-browser
 
 Suggests:
 -------------
