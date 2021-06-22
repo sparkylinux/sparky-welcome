@@ -18,15 +18,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Dependencies:
 -------------
-bash coreutils grep mount psmisc sparky-about sparky-aptus-appcenter sparky-aptus-upgrade sparky-remsu sparky-su sparky-system yad (>= 5.0~sparky6~0)
+bash coreutils grep psmisc sparky-about sparky-aptus-appcenter sparky-aptus-upgrade sparky-su sparky-system yad (>= 5.0~sparky6~0)
 
 Recommends:
 -------------
 firefox-esr | firefox | chromium | dillo | epiphany | konqueror | seamonkey | tor-browser | vivaldi-stable | opera-stable | google-chrome-stable | palemoon | otter-browser | icecat | dooble | brave-browser | waterfox-classic-kpe | iron | librewolf | epiphany-browser
-
-Suggests:
--------------
-calamares sparky-backup-core
 
 Install:
 -------------

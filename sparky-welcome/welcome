@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Last update by pavroo June 12, 2021
+# Last update by pavroo June 22, 2021
 
 LANGUAGE=${LANG:0:2}
 EN=`echo $LANGUAGE | grep en`
@@ -15,20 +15,20 @@ else
 	LANGUAGE="en"
 fi
 
-POS="--center --width 800 --height 540"
+POS="--center --width 800 --height 550"
 HTML="--html --browser"
 # index page
 
-TESTMODE=`mount | grep squashfs`
-if [ "$TESTMODE" != "" ] && [ -d /home/live ]; then
-
-	if [ "$1" = "" ]; then
-		yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index-live.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
-	elif [ "$1" = "glowna" ]; then
-		yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index-live.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
-	fi
-	
-else
+#TESTMODE=`mount | grep squashfs`
+#if [ "$TESTMODE" != "" ] && [ -d /home/live ]; then
+#
+#	if [ "$1" = "" ]; then
+#		yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index-live.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+#	elif [ "$1" = "glowna" ]; then
+#		yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index-live.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+#	fi
+#	
+#else
 
 	if [ "$1" = "" ]; then
 		yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
@@ -36,6 +36,6 @@ else
 		yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
 	fi
 
-fi
+#fi
 
 exit 0

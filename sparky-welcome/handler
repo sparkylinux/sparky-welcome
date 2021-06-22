@@ -37,7 +37,7 @@ if [[ "$URI" == cos* ]]; then
 	CHECK03=`echo "$CMD" | grep abo03`
 	CHECK04=`echo "$CMD" | grep sys04`
 	CHECK05=`echo "$CMD" | grep ext05`
-	CHECK06=`echo "$CMD" | grep ins06`
+	#CHECK06=`echo "$CMD" | grep ins06`
 
 	if [ "$CHECK01" != "" ]; then
 		killall -9 yad
@@ -74,21 +74,21 @@ if [[ "$URI" == cos* ]]; then
 		killall -9 yad
 		exit 1
 	
-	elif [ "$CHECK06" != "" ]; then
-		killall -9 yad
-		# how much RAM you have
-		CHECKRAM="`cat /proc/meminfo | head -n1 | cut -f2 -d":" | tr -s " " | cut -f2 -d " "`"
-		# minimum size of RAM to launch Calamares is 1 GB | ~996184 kB
-		RAMMIN="996184"
-		if [ "$CHECKRAM" -gt "$RAMMIN" ]; then
-			echo "RAM is smaller than 1GB, launch Sparky Advanced Installer GUI"
-			remsu /usr/bin/sparky-installer gui
-			exit 1
-		else
-			echo "RAM is bigger than 1GB, launch Calamares"
-			remsu /usr/bin/calamares
-			exit 1
-		fi
+	#elif [ "$CHECK06" != "" ]; then
+	#	killall -9 yad
+	#	# how much RAM you have
+	#	CHECKRAM="`cat /proc/meminfo | head -n1 | cut -f2 -d":" | tr -s " " | cut -f2 -d " "`"
+	#	# minimum size of RAM to launch Calamares is 1 GB | ~996184 kB
+	#	RAMMIN="996184"
+	#	if [ "$CHECKRAM" -gt "$RAMMIN" ]; then
+	#		echo "RAM is smaller than 1GB, launch Sparky Advanced Installer GUI"
+	#		remsu /usr/bin/sparky-installer gui
+	#		exit 1
+	#	else
+	#		echo "RAM is bigger than 1GB, launch Calamares"
+	#		remsu /usr/bin/calamares
+	#		exit 1
+	#	fi
 	else
 		echo "unknown command... exiting"
 		exit 0
