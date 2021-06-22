@@ -15,7 +15,7 @@ else
 	LANGUAGE="en"
 fi
 
-POS="--center --width 825 --height 572"
+POS="--center --width 800 --height 540"
 HTML="--html --browser"
 # index page
 

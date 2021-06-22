@@ -1,14 +1,14 @@
 // Polish localization file for main
 // Copyright 2021 Pawel "pavroo" Pijanowski <pavroo@onet.eu>
 // Under the GNU GPL v3
-// Last update 2021/06/13 by pavroo
+// Last update 2021/06/22 by pavroo
 dict.entries['main'] = {};
 // main menu
 dict.entries['main']['home'] = "Strona domowa";
 dict.entries['main']['forums'] = "Forum";
 dict.entries['main']['wiki'] = "Wiki";
 dict.entries['main']['donate'] = "Wsparcie";
-dict.entries['main']['rss'] = "Wiadomości RSS";
+dict.entries['main']['rss'] = "RSS";
 dict.entries['main']['appcenter'] = "AppCenter";
 dict.entries['main']['upgrade'] = "Aktualizuj";
 dict.entries['main']['about'] = "O Sparky";

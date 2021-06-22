@@ -25,7 +25,7 @@ h1 {
 
 h2 {
 	font-size: 1.3em;
-	padding: 8px;
+	padding: 1px;
 }
 
 h3 {
@@ -170,7 +170,7 @@ div.scrollmenu a:hover {
 	height: 22px; /*36*/
 	/*color: white;*/
 	color: black;
-	padding: 16px 16px;
+	padding: 14px 14px;
 	text-align: center;
 	text-decoration: none;
 	text-shadow: 2px 2px 2px rgba(0,0,0,.3);
