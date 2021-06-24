@@ -1,7 +1,7 @@
 // English localization file for main
 // Originally created by Piotr "MoroS" Mrożek 2018
 // Under the GNU GPL v3
-// Last update 2021/06/22 by pavroo
+// Last update 2021/06/24 by pavroo
 dict.entries['main'] = {};
 // main menu
 dict.entries['main']['home'] = "Home page";
@@ -18,4 +18,4 @@ dict.entries['main']['keep'] = "Keep in touch with Sparky community:";
 dict.entries['main']['exit'] = "Exit";
 dict.entries['main']['git'] = "Git repo";
 dict.entries['main']['install'] = "Installation";
-dict.entries['main']['remaster'] = "Build Sparky";
+dict.entries['main']['remaster'] = "Backup";

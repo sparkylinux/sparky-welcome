@@ -1,6 +1,6 @@
 // Spanish translation for Sparky Welcome by Goro86 2021/06/11
 // Under the GNU GPL v3
-// Last update 2021/06/22 by pavroo
+// Last update 2021/06/24 by pavroo
 dict.entries['main'] = {};
 // main menu
 dict.entries['main']['home'] = "Página principal";
@@ -17,4 +17,4 @@ dict.entries['main']['keep'] = "Manténganse en contacto con la comunidad de Spa
 dict.entries['main']['exit'] = "Salida";
 dict.entries['main']['git'] = "Git repo";
 dict.entries['main']['install'] = "Instalación ";
-dict.entries['main']['remaster'] = "Construye Sparky";
+dict.entries['main']['remaster'] = "Respaldo ";
