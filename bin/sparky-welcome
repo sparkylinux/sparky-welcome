@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Last update June 14, 2021 by pavroo
+# Last update July 28, 2021 by pavroo
 
 sleep 5
 
@@ -17,7 +17,7 @@ cat > /home/$USER0/.config/autostart/sparky-welcome.desktop << FOO
 Exec=
 FOO
 
-echo "first run, create desktop file now..."
+echo "first run, creating desktop file now..."
 fi
 
 cd /usr/lib/sparky-welcome

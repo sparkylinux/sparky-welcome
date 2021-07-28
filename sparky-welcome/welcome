@@ -1,15 +1,18 @@
 #!/bin/bash
 
-# Last update by pavroo June 22, 2021
+# Last update by pavroo July 28, 2021
 
 LANGUAGE=${LANG:0:2}
 EN=`echo $LANGUAGE | grep en`
 ES=`echo $LANGUAGE | grep es`
 PL=`echo $LANGUAGE | grep pl`
+RU=`echo $LANGUAGE | grep ru`
 
 if [ "$ES" != "" ]; then
 	LANGUAGE="$LANGUAGE"
 elif [ "$PL" != "" ]; then
+	LANGUAGE="$LANGUAGE"
+elif [ "$RU" != "" ]; then
 	LANGUAGE="$LANGUAGE"
 else
 	LANGUAGE="en"
