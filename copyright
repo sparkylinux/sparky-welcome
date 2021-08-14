@@ -17,7 +17,11 @@ Files: en
 Files: es
     Copyright (C) 2021 Goro86
     License: GPL-3+
-    
+
+Files: hu
+    Copyright (C) 2021 nemomen
+    License: GPL-3+
+
 Files: pl
     Copyright (C) 2021 pavroo
     License: GPL-3+
