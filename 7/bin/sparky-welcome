@@ -1,26 +1,28 @@
 #!/bin/bash
 
-# Last update July 28, 2021 by pavroo
-
-sleep 5
+# Last update Sep 21, 2021 by pavroo
 
 USER0=`whoami`
-if [ -f /home/$USER0/.config/autostart/sparky-welcome.desktop ]; then
-
-echo "not first run, exiting..."
-
-else
-
-# don't autorun sparky-welcome more than one time 
+if [ "$1" = "first" ]; then
+	sleep 5
+	if [ -f /home/$USER0/.config/autostart/sparky-welcome.desktop ]; then
+		echo "not first run, exiting..."
+		exit 1
+	else
+		# don't autorun sparky-welcome more than one time 
 cat > /home/$USER0/.config/autostart/sparky-welcome.desktop << FOO
 [Desktop Entry]
 Exec=
 FOO
-
-echo "first run, creating desktop file now..."
+		echo "first run, creating desktop file now..."
+		cd /usr/lib/sparky-welcome
+		./welcome
+	fi
 fi
 
-cd /usr/lib/sparky-welcome
-./welcome
+if [ "$1" = "" ]; then
+	cd /usr/lib/sparky-welcome
+	./welcome
+fi
 
 exit 0

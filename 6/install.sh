@@ -15,7 +15,7 @@
 #  Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 
 if [ "$1" = "uninstall" ]; then
-	rm -f /etc/xdg/autostart/sparky-welcome.desktop
+	rm -f /etc/xdg/autostart/sparky-welcome-first.desktop
 	rm -f /usr/bin/sparky-welcome
 	rm -rf /usr/lib/sparky-welcome 
 	rm -f /usr/share/applications/sparky-welcome.desktop
