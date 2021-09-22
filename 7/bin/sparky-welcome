@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Last update Sep 21, 2021 by pavroo
+# Last update Sep 22, 2021 by pavroo
 
 USER0=`whoami`
 if [ "$1" = "first" ]; then
@@ -9,7 +9,11 @@ if [ "$1" = "first" ]; then
 		echo "not first run, exiting..."
 		exit 1
 	else
-		# don't autorun sparky-welcome more than one time 
+		# don't autorun sparky-welcome more than one time
+		if [ ! -d /home/$USER0/.config/autostart ]; then
+			echo "user $USER0 autostart dir is missing, creating new one now..."
+			mkdir -p /home/$USER0/.config/autostart
+		fi
 cat > /home/$USER0/.config/autostart/sparky-welcome.desktop << FOO
 [Desktop Entry]
 Exec=
@@ -21,6 +25,7 @@ FOO
 fi
 
 if [ "$1" = "" ]; then
+	echo "launching sparky-welcome manually..."
 	cd /usr/lib/sparky-welcome
 	./welcome
 fi
