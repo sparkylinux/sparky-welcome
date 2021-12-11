@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Last update by pavroo August 14, 2021
+# Last update by pavroo December 11, 2021
 
 LANGUAGE=${LANG:0:2}
+EL=`echo $LANGUAGE | grep el`
 EN=`echo $LANGUAGE | grep en`
 ES=`echo $LANGUAGE | grep es`
 HU=`echo $LANGUAGE | grep hu`

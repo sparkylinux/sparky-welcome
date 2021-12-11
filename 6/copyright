@@ -10,6 +10,10 @@ Files: lang/en.js; handler;
     Oryginally created by Piotr "MoroS" Mrożek
     License: GPL-3+
 
+Files: el
+    Copyright (C) 2021 jidan
+    License: GPL-3+
+
 Files: en
     Copyright (C) 2021 pavroo
     License: GPL-3+
