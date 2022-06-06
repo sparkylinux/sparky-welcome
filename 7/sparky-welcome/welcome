@@ -1,18 +1,21 @@
 #!/bin/bash
 
-# Last update by pavroo December 11, 2021
+# Last update by pavroo June 6, 2022
 
 LANGUAGE=${LANG:0:2}
 EL=`echo $LANGUAGE | grep el`
 EN=`echo $LANGUAGE | grep en`
 ES=`echo $LANGUAGE | grep es`
 HU=`echo $LANGUAGE | grep hu`
+IT=`echo $LANGUAGE | grep it`
 PL=`echo $LANGUAGE | grep pl`
 RU=`echo $LANGUAGE | grep ru`
 
 if [ "$ES" != "" ]; then
 	LANGUAGE="$LANGUAGE"
 elif [ "$HU" != "" ]; then
+	LANGUAGE="$LANGUAGE"
+elif [ "$IT" != "" ]; then
 	LANGUAGE="$LANGUAGE"
 elif [ "$PL" != "" ]; then
 	LANGUAGE="$LANGUAGE"
@@ -25,24 +28,10 @@ fi
 POS="--center --width 800 --height 550"
 HTML="--html --browser"
 # index page
-
-#TESTMODE=`mount | grep squashfs`
-#if [ "$TESTMODE" != "" ] && [ -d /home/live ]; then
-#
-#	if [ "$1" = "" ]; then
-#		yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index-live.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
-#	elif [ "$1" = "glowna" ]; then
-#		yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index-live.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
-#	fi
-#	
-#else
-
-	if [ "$1" = "" ]; then
-		yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
-	elif [ "$1" = "glowna" ]; then
-		yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
-	fi
-
-#fi
+if [ "$1" = "" ]; then
+	yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+elif [ "$1" = "glowna" ]; then
+	yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+fi
 
 exit 0
