@@ -189,3 +189,15 @@ div.scrollmenu a:hover {
     background-color: #c3c3c3;
     color: white;
 }
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #444;
+   color: white;
+   text-align: center;
+   font-size: 12px;
+   font-weight: bold;
+}

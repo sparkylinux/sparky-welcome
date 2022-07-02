@@ -18,8 +18,12 @@ Files: en
     Copyright (C) 2021 pavroo
     License: GPL-3+
 
-Files: es
+Files: es_AR
     Copyright (C) 2021 Goro86
+    License: GPL-3+
+
+File: es_ES
+    Copyright 2022 depaz
     License: GPL-3+
 
 Files: hu
