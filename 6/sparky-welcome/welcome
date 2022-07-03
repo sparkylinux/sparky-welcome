@@ -1,21 +1,25 @@
 #!/bin/bash
 
-# Last update by pavroo July 3, 2022
+# Last update by pavroo July 3.1, 2022
 
-LANGUAGE=${LANG:0:5}
+LANGUAGE=${LANG:0:2}
+LANGUAGE5=${LANG:0:5}
 EL=`echo $LANGUAGE | grep el`
 EN=`echo $LANGUAGE | grep en`
-ESAR=`echo $LANGUAGE | grep es_AR`
-ESAR=`echo $LANGUAGE | grep es_ES`
+ES=`echo $LANGUAGE | grep es`
+ESAR=`echo $LANGUAGE5 | grep es_AR`
+#ESES=`echo $LANGUAGE5 | grep es_ES`
 HU=`echo $LANGUAGE | grep hu`
 IT=`echo $LANGUAGE | grep it`
 PL=`echo $LANGUAGE | grep pl`
 RU=`echo $LANGUAGE | grep ru`
 
-if [ "$ESAR" != "" ]; then
-	LANGUAGE="es_AR"
-elif [ "$ESES" != "" ]; then
-	LANGUAGE="es_ES"
+if [ "$ES" != "" ]; then
+	if [ "$ESAR" != "" ]; then
+		LANGUAGE="es_AR"
+	else
+		LANGUAGE="es_ES"
+	fi
 elif [ "$HU" != "" ]; then
 	LANGUAGE="hu"
 elif [ "$IT" != "" ]; then
