@@ -1,0 +1,68 @@
+Upstream Author(s): 
+    Paweł "pavroo" Pijanowski <pavroo@onet.eu>
+
+Files: *    
+    Copyright (C) 2021-2023 Paweł Pijanowski
+    License: GPL-3+
+
+### translations ###
+Files: lang/en.js; handler; 
+    Oryginally created by Piotr "MoroS" Mrożek
+    License: GPL-3+
+
+Files: el
+    Copyright (C) 2021 jidan
+    License: GPL-3+
+
+Files: en
+    Copyright (C) 2021 pavroo
+    License: GPL-3+
+
+Files: es_AR
+    Copyright (C) 2021 Goro86
+    License: GPL-3+
+
+File: es_ES
+    Copyright 2022 depaz
+    License: GPL-3+
+
+Files: hu
+    Copyright (C) 2021 nemomen
+    License: GPL-3+
+
+File: it
+    Copyright 2022 Yodel Sinatra <mastodon.uno/@YodelSinatra>
+    License: GNU GPL-3+
+
+Files: pl
+    Copyright (C) 2021 pavroo
+    License: GPL-3+
+
+Files: ru
+    Copyright (C) 2021 ChourS
+    License: GPL-3+
+
+File: uk
+    Copyright 2023 XalisRatt
+    License: GNU GPL-3
+
+### end translations ###
+
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+ 
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+ 
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'.

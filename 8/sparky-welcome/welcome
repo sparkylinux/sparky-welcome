@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Last update by pavroo January 25, 2023
+
+LANGUAGE=${LANG:0:2}
+LANGUAGE5=${LANG:0:5}
+EL=`echo $LANGUAGE | grep el`
+EN=`echo $LANGUAGE | grep en`
+ES=`echo $LANGUAGE | grep es`
+ESAR=`echo $LANGUAGE5 | grep es_AR`
+#ESES=`echo $LANGUAGE5 | grep es_ES`
+HU=`echo $LANGUAGE | grep hu`
+IT=`echo $LANGUAGE | grep it`
+PL=`echo $LANGUAGE | grep pl`
+RU=`echo $LANGUAGE | grep ru`
+UK=`echo $LANGUAGE | grep uk`
+
+if [ "$ES" != "" ]; then
+	if [ "$ESAR" != "" ]; then
+		LANGUAGE="es_AR"
+	else
+		LANGUAGE="es_ES"
+	fi
+elif [ "$HU" != "" ]; then
+	LANGUAGE="hu"
+elif [ "$IT" != "" ]; then
+	LANGUAGE="it"
+elif [ "$PL" != "" ]; then
+	LANGUAGE="pl"
+elif [ "$RU" != "" ]; then
+	LANGUAGE="ru"
+elif [ "$UK" != "" ]; then
+	LANGUAGE="uk"
+else
+	LANGUAGE="en"
+fi
+
+POS="--center --width 800 --height 550"
+HTML="--html --browser"
+# index page
+if [ "$1" = "" ]; then
+	yad --window-icon=/usr/share/pixmaps/sparky-welcome.png $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+elif [ "$1" = "glowna" ]; then
+	yad --window-icon=/usr/share/pixmaps/sparky-welcome.com $POS $HTML --uri="index.html" --user-agent="$LANGUAGE" --uri-handler="./handler"
+fi
+
+exit 0

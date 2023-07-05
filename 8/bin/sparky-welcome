@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Last update Sep 22, 2021 by pavroo
+
+USER0=`whoami`
+if [ "$1" = "first" ]; then
+	sleep 5
+	if [ -f /home/$USER0/.config/autostart/sparky-welcome.desktop ]; then
+		echo "not first run, exiting..."
+		exit 1
+	else
+		# don't autorun sparky-welcome more than one time
+		if [ ! -d /home/$USER0/.config/autostart ]; then
+			echo "user $USER0 autostart dir is missing, creating new one now..."
+			mkdir -p /home/$USER0/.config/autostart
+		fi
+cat > /home/$USER0/.config/autostart/sparky-welcome.desktop << FOO
+[Desktop Entry]
+Exec=
+FOO
+		echo "first run, creating desktop file now..."
+		cd /usr/lib/sparky-welcome
+		./welcome
+	fi
+fi
+
+if [ "$1" = "" ]; then
+	echo "launching sparky-welcome manually..."
+	cd /usr/lib/sparky-welcome
+	./welcome
+fi
+
+exit 0
