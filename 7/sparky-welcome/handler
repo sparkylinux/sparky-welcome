@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Last update by pavroo June 22, 2021
+# Last update by pavroo February 9, 2024
 
 URI="$1"
-
-#cd /usr/lib/sparky-welcome
 
 # ignore empty URI
 if [[ "$URI" == "" ]]; then
@@ -15,7 +13,7 @@ fi
 # html URI runs external www-browser
 if [[ "$URI" == http* ]]; then
 	echo "running external web page..."
-	killall -9 yad
+	kill -USR1 $YAD_PID
 	x-www-browser "$URI"
 	./welcome
 	exit 1
@@ -37,58 +35,42 @@ if [[ "$URI" == cos* ]]; then
 	CHECK03=`echo "$CMD" | grep abo03`
 	CHECK04=`echo "$CMD" | grep sys04`
 	CHECK05=`echo "$CMD" | grep ext05`
-	#CHECK06=`echo "$CMD" | grep ins06`
 
 	if [ "$CHECK01" != "" ]; then
-		killall -9 yad
-		spsudo /usr/bin/sparky-aptus-appcenter
+		kill -USR1 $YAD_PID
+		remsu /usr/bin/sparky-aptus-appcenter
 		./welcome
 		exit 0
 	
 	elif [ "$CHECK02" != "" ]; then
-		killall -9 yad
+		kill -USR1 $YAD_PID
 		if [ -f /home/$USER/.sparky-welcome-first ]; then
 			echo "it is not first run, launch upgrade only"
-			spsudo /usr/bin/sparky-aptus-upgrade
+			remsu /usr/bin/sparky-aptus-upgrade
 		else
 			echo "it is the first run, run upgrade and locale installation"
-			spsudo /usr/bin/sparky-aptus-upgrade && spsudo /usr/lib/sparky-aptus-appcenter/bin/sparky-locale
+			remsu /usr/bin/sparky-aptus-upgrade && spsudo /usr/lib/sparky-aptus-appcenter/bin/sparky-locale
 			touch /home/$USER/.sparky-welcome-first
 		fi
 		./welcome
 		exit 0
 	
 	elif [ "$CHECK03" != "" ]; then
-		killall -9 yad
+		kill -USR1 $YAD_PID
 		/usr/bin/sparky-about
 		./welcome
 		exit 0
 	
 	elif [ "$CHECK04" != "" ]; then
-		killall -9 yad
+		kill -USR1 $YAD_PID
 		/usr/bin/sparky-system
 		./welcome
 		exit 0
 	
 	elif [ "$CHECK05" != "" ]; then
-		killall -9 yad
+		kill -USR1 $YAD_PID
 		exit 1
 	
-	#elif [ "$CHECK06" != "" ]; then
-	#	killall -9 yad
-	#	# how much RAM you have
-	#	CHECKRAM="`cat /proc/meminfo | head -n1 | cut -f2 -d":" | tr -s " " | cut -f2 -d " "`"
-	#	# minimum size of RAM to launch Calamares is 1 GB | ~996184 kB
-	#	RAMMIN="996184"
-	#	if [ "$CHECKRAM" -gt "$RAMMIN" ]; then
-	#		echo "RAM is smaller than 1GB, launch Sparky Advanced Installer GUI"
-	#		remsu /usr/bin/sparky-installer gui
-	#		exit 1
-	#	else
-	#		echo "RAM is bigger than 1GB, launch Calamares"
-	#		remsu /usr/bin/calamares
-	#		exit 1
-	#	fi
 	else
 		echo "unknown command... exiting"
 		exit 0
