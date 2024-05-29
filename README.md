@@ -1,7 +1,7 @@
 Sparky Welcome
 This tool displays a welcome window on Sparky host. It replaces Sparky First Run.
 
-Copyright (C) 2021-2023 Paweł Pijanowski and others, see copyright file.
+Copyright (C) 2021-2024 Paweł Pijanowski and others, see copyright file.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ bash coreutils grep psmisc sparky-about sparky-aptus-appcenter sparky-aptus-upgr
 
 Recommends:
 -------------
-firefox-esr | firefox | chromium | dillo | epiphany-browser | konqueror | seamonkey | tor-browser | vivaldi-stable | opera-stable | google-chrome-stable | palemoon | otter-browser | icecat | dooble | brave-browser | waterfox-classic-kpe | iron | librewolf | slimjet
+firefox-esr | firefox | firefox-sparky | midori | chromium | dillo | epiphany-browser | konqueror | seamonkey | tor-browser | vivaldi-stable | opera-stable | google-chrome-stable | palemoon | otter-browser | icecat | dooble | brave-browser | waterfox-classic-kpe | iron | librewolf | slimjet
 
 Install:
 -------------
