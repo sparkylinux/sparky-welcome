@@ -1,7 +1,7 @@
 // Magyar nyelvi fájl a fő(oldalnak) [nemomen 2021, BunnyMnemonic 2023]
 // Eredeti létrehozó Piotr "MoroS" Mrożek 2018
 // GNU GPL v3 licenc szerint
-// Utolsó frissítés 2023/09/22 BunnyMnemonic által
+// Utolsó frissítés 2024/06/08 by pavroo
 dict.entries['main'] = {};
 // főmenü
 dict.entries['main']['home'] = "Honlap";
@@ -19,3 +19,4 @@ dict.entries['main']['exit'] = "Kilépés";
 dict.entries['main']['git'] = "Git repo";
 dict.entries['main']['install'] = "Telepítés";
 dict.entries['main']['remaster'] = "Biztonsági mentés";
+dict.entries['main']['sponsoring'] = "Sponsors";

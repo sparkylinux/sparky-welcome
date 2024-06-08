@@ -1,7 +1,7 @@
 // English localization file for main
 // Originally created by Piotr "MoroS" MroÅ¼ek 2018
 // Under the GNU GPL v3
-// Last update 2021/06/24 by pavroo
+// Last update 2024/06/08 by pavroo
 dict.entries['main'] = {};
 // main menu
 dict.entries['main']['home'] = "Αρχική σελίδα";
@@ -19,3 +19,4 @@ dict.entries['main']['exit'] = "Έξοδος";
 dict.entries['main']['git'] = "Αποθετήριο Git";
 dict.entries['main']['install'] = "Εγκατάσταση";
 dict.entries['main']['remaster'] = "Αντιγραφα ασφαλείας";
+dict.entries['main']['sponsoring'] = "Sponsors";

@@ -1,7 +1,7 @@
 // Russian localization file for main
 // Originally created by Piotr "MoroS" MroЕјek 2018
 // Under the GNU GPL v3
-// Last update 2021/06/24 by pavroo
+// Last update 2024/06/08 by pavroo
 dict.entries['main'] = {};
 // main menu
 dict.entries['main']['home'] = "Домашняя страница";
@@ -19,3 +19,4 @@ dict.entries['main']['exit'] = "Выход";
 dict.entries['main']['git'] = "Репозиторий Git";
 dict.entries['main']['install'] = "Установка";
 dict.entries['main']['remaster'] = "Резервное копирование";
+dict.entries['main']['sponsoring'] = "Sponsors";

@@ -1,7 +1,7 @@
 // Spanish (es_ES) localization file for main
 // Originally created by Piotr "MoroS" Mrożek 2018
 // Under the GNU GPL v3
-// Last update 2021/06/24 by pavroo
+// Last update 2024/06/08 by pavroo
 // Translated by depaz
 dict.entries['main'] = {};
 // main menu
@@ -20,3 +20,4 @@ dict.entries['main']['exit'] = "Salir";
 dict.entries['main']['git'] = "Repositorio Git";
 dict.entries['main']['install'] = "Instalación";
 dict.entries['main']['remaster'] = "Copia de seguridad";
+dict.entries['main']['sponsoring'] = "Sponsors";
