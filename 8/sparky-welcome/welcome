@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Last update by pavroo January 25, 2023
+# Last update by pavroo July 31, 2024
 
 LANGUAGE=${LANG:0:2}
 LANGUAGE5=${LANG:0:5}
@@ -9,6 +9,7 @@ EN=`echo $LANGUAGE | grep en`
 ES=`echo $LANGUAGE | grep es`
 ESAR=`echo $LANGUAGE5 | grep es_AR`
 #ESES=`echo $LANGUAGE5 | grep es_ES`
+FI=`echo $LANGUAGE | grep fi`
 HU=`echo $LANGUAGE | grep hu`
 IT=`echo $LANGUAGE | grep it`
 PL=`echo $LANGUAGE | grep pl`
@@ -21,6 +22,8 @@ if [ "$ES" != "" ]; then
 	else
 		LANGUAGE="es_ES"
 	fi
+elif [ "$FI" != "" ]; then
+	LANGUAGE="fi"
 elif [ "$HU" != "" ]; then
 	LANGUAGE="hu"
 elif [ "$IT" != "" ]; then
