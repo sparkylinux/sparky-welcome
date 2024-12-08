@@ -1,6 +1,6 @@
 #!/bin/bash
-
-# Last update by pavroo July 31, 2024
+export WEBKIT_DISABLE_COMPOSITING_MODE=1
+# Last update by pavroo December 8, 2024
 
 LANGUAGE=${LANG:0:2}
 LANGUAGE5=${LANG:0:5}
