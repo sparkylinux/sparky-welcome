@@ -1,9 +1,10 @@
 #!/bin/bash
 export WEBKIT_DISABLE_COMPOSITING_MODE=1
-# Last update by pavroo December 8, 2024
+# Last update by pavroo May 29, 2025
 
 LANGUAGE=${LANG:0:2}
 LANGUAGE5=${LANG:0:5}
+DE=`echo $LANGUAGE | grep de`
 EL=`echo $LANGUAGE | grep el`
 EN=`echo $LANGUAGE | grep en`
 ES=`echo $LANGUAGE | grep es`
@@ -22,6 +23,8 @@ if [ "$ES" != "" ]; then
 	else
 		LANGUAGE="es_ES"
 	fi
+elif [ "$DE" != "" ]; then
+	LANGUAGE="de"
 elif [ "$FI" != "" ]; then
 	LANGUAGE="fi"
 elif [ "$HU" != "" ]; then

@@ -2,7 +2,7 @@ Upstream Author(s):
     Paweł "pavroo" Pijanowski <pavroo@onet.eu>
 
 Files: *    
-    Copyright (C) 2021-2024 Paweł Pijanowski
+    Copyright (C) 2021-2025 Paweł Pijanowski
     License: GPL-3+
 
 ### translations ###
@@ -10,6 +10,10 @@ Files: lang/en.js; handler;
     Oryginally created by Piotr "MoroS" Mrożek
     License: GPL-3+
 
+File: de
+    Copyright 2025 Roy
+    License: GNU GPL-3+
+    
 Files: el
     Copyright (C) 2021 jidan
     License: GPL-3+
