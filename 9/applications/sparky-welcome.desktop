@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Welcome
+Name[pl]=Witaj
+GenericName=Welcome
+Comment=Welcome to the Sparky world!
+Comment[pl]=Witaj w świecie Sparky!
+Exec=/usr/bin/sparky-welcome
+Icon=sparky-welcome
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Applications;System;
+
